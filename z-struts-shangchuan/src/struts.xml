@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	  <package name="upload" extends="struts-default">  
+      <action name="upFile" class="cn.csdn.hr.up.action.UploadAction">  
+ 
+          <!-- 上传成功后跳转到success.jsp页面 -->  
+  
+          <result name="success">/sucess.jsp</result>  
+           <result name="error">/error.jsp</result>  
+ 
+          <!-- 上传失败后返回到upload.jsp页面 -->  
+ 
+          <result name="input">/upload.jsp</result>  
+ 
+      </action>  
+ 	 <action name="FileDownload" class="cn.csdn.hr.up.action.FileDownload">
+           <result name="success" type="stream">
+               <param name="contentType">text/plain</param>
+               <param name="contentDisposition">attachment;fileName="${fileName}"</param>
+               <param name="inputName">downloadFile</param>
+               <param name="bufferSize">1024</param>
+           </result>
+       </action> 
+   </package>   
+	
+
+</struts>    

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="z-struts-shangchuan"
+  id="myeclipse.1472005502020"
+  context-root="/z-struts-shangchuan"
+  j2ee-spec="5.0"
+  archive="z-struts-shangchuan.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
